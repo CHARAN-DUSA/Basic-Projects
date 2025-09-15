@@ -12,7 +12,7 @@ const otps = new Map(); // email -> { otp, timestamp }
 // OTP request tracking for rate-limiting
 const otpRequests = new Map(); // email -> [timestamps of recent requests]
 
-const OTP_VALIDITY = 60 * 1000; // 60 seconds
+const OTP_VALIDITY = 180 * 1000; // 180 seconds
 const OTP_COOLDOWN = 30 * 1000; // 30 seconds between requests
 
 // Nodemailer transporter (use env vars for security)
